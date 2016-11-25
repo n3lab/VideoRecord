@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="VideoRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ab6-nD-RHp">
+                                <rect key="frame" x="16" y="142" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Kt-hR-a1f"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jaF-cC-yLU">
+                                <rect key="frame" x="16" y="180" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="X9B-JO-Dbf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRb-MW-ihX">
+                                <rect key="frame" x="16" y="218" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.53333333329999999" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2uI-RL-fje"/>
+                                </constraints>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKM-8f-Zfl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YRb-MW-ihX" firstAttribute="top" secondItem="jaF-cC-yLU" secondAttribute="bottom" constant="8" id="3x6-6n-nBD"/>
+                            <constraint firstItem="jaF-cC-yLU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4RI-j5-38e"/>
+                            <constraint firstItem="jaF-cC-yLU" firstAttribute="top" secondItem="ab6-nD-RHp" secondAttribute="bottom" constant="8" id="9eo-tr-kW7"/>
+                            <constraint firstItem="ab6-nD-RHp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DRf-s2-PaY"/>
+                            <constraint firstItem="YRb-MW-ihX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="O54-sf-VBI"/>
+                            <constraint firstItem="jaF-cC-yLU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SgR-zw-oro"/>
+                            <constraint firstItem="ab6-nD-RHp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="122" id="XHi-ZP-gnc"/>
+                            <constraint firstItem="ab6-nD-RHp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xtf-TN-pYW"/>
+                            <constraint firstItem="YRb-MW-ihX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zss-k1-FAN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="ab6-nD-RHp" id="9T2-3X-9mF"/>
+                        <outlet property="passwordTextField" destination="jaF-cC-yLU" id="2IJ-Kc-1Jr"/>
+                        <segue destination="WoS-v7-skZ" kind="presentation" identifier="ShowRecordController" id="sFY-8E-yWC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="107"/>
+        </scene>
+        <!--Record Controller-->
+        <scene sceneID="XVp-rc-b0i">
+            <objects>
+                <viewController restorationIdentifier="RecordController" storyboardIdentifier="RecordController" id="WoS-v7-skZ" customClass="RecordController" customModule="VideoRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z3W-Rb-zyB"/>
+                        <viewControllerLayoutGuide type="bottom" id="6w2-5F-v6x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F2u-Fe-4sh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akZ-e3-Oqp">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MfU-Gf-YUo"/>
+                                </constraints>
+                                <state key="normal" title="Записать первое видео">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordFirstVideoButtonPressed:" destination="WoS-v7-skZ" eventType="touchUpInside" id="lrI-CS-vDi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MU5-eF-Bcj">
+                                <rect key="frame" x="16" y="66" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="d3j-nU-AOK"/>
+                                </constraints>
+                                <state key="normal" title="Посмотреть первое видео">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFirstVideoButtonPressed:" destination="WoS-v7-skZ" eventType="touchUpInside" id="leE-1X-8mM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxn-mb-YD5">
+                                <rect key="frame" x="16" y="121" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Efb-GU-6ih"/>
+                                </constraints>
+                                <state key="normal" title="Записать второе видео">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordSecondVideoButtonPressed:" destination="WoS-v7-skZ" eventType="touchUpInside" id="9PN-bX-o3R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfd-5A-Jkd">
+                                <rect key="frame" x="16" y="159" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tbF-QE-Bex"/>
+                                </constraints>
+                                <state key="normal" title="Посмотреть второе видео">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSecondVideoButtonPressed:" destination="WoS-v7-skZ" eventType="touchUpInside" id="SZy-uD-v7o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgi-Y5-ndN">
+                                <rect key="frame" x="16" y="214" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gjt-e8-279"/>
+                                </constraints>
+                                <state key="normal" title="Объединить оба видео">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mergeVideosButtonPressed:" destination="WoS-v7-skZ" eventType="touchUpInside" id="UvS-lN-BNd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHb-bm-2KQ">
+                                <rect key="frame" x="16" y="252" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KDB-hS-xBz"/>
+                                </constraints>
+                                <state key="normal" title="Посмотреть, что получилось">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMergedVideoButtonPressed:" destination="WoS-v7-skZ" eventType="touchUpInside" id="fDn-8S-WYJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tm5-JM-UGe">
+                                <rect key="frame" x="16" y="307" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.53333333329999999" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yrO-Sw-5dA"/>
+                                </constraints>
+                                <state key="normal" title="Отправить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendVideoButtonPressed:" destination="WoS-v7-skZ" eventType="touchUpInside" id="iYl-at-qBC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GHb-bm-2KQ" firstAttribute="trailing" secondItem="F2u-Fe-4sh" secondAttribute="trailingMargin" id="6eZ-f6-BNb"/>
+                            <constraint firstItem="GHb-bm-2KQ" firstAttribute="top" secondItem="mgi-Y5-ndN" secondAttribute="bottom" constant="8" id="DeH-Om-zwC"/>
+                            <constraint firstItem="mgi-Y5-ndN" firstAttribute="top" secondItem="tfd-5A-Jkd" secondAttribute="bottom" constant="25" id="EyM-Dp-WJz"/>
+                            <constraint firstItem="tfd-5A-Jkd" firstAttribute="top" secondItem="Hxn-mb-YD5" secondAttribute="bottom" constant="8" id="G0f-52-uBc"/>
+                            <constraint firstItem="MU5-eF-Bcj" firstAttribute="trailing" secondItem="F2u-Fe-4sh" secondAttribute="trailingMargin" id="IFt-8a-IHp"/>
+                            <constraint firstItem="mgi-Y5-ndN" firstAttribute="leading" secondItem="F2u-Fe-4sh" secondAttribute="leadingMargin" id="Jw8-Va-QdY"/>
+                            <constraint firstItem="akZ-e3-Oqp" firstAttribute="trailing" secondItem="F2u-Fe-4sh" secondAttribute="trailingMargin" id="KcH-sJ-Hhp"/>
+                            <constraint firstItem="akZ-e3-Oqp" firstAttribute="top" secondItem="Z3W-Rb-zyB" secondAttribute="bottom" constant="8" id="Ptg-FJ-pda"/>
+                            <constraint firstItem="tfd-5A-Jkd" firstAttribute="leading" secondItem="F2u-Fe-4sh" secondAttribute="leadingMargin" id="Sbd-c2-xsQ"/>
+                            <constraint firstItem="MU5-eF-Bcj" firstAttribute="top" secondItem="akZ-e3-Oqp" secondAttribute="bottom" constant="8" id="UfK-Kw-T1P"/>
+                            <constraint firstItem="Hxn-mb-YD5" firstAttribute="trailing" secondItem="F2u-Fe-4sh" secondAttribute="trailingMargin" id="YQn-1e-btP"/>
+                            <constraint firstItem="Tm5-JM-UGe" firstAttribute="leading" secondItem="F2u-Fe-4sh" secondAttribute="leadingMargin" id="YVv-Vm-KIN"/>
+                            <constraint firstItem="Hxn-mb-YD5" firstAttribute="leading" secondItem="F2u-Fe-4sh" secondAttribute="leadingMargin" id="Z8L-YY-yqN"/>
+                            <constraint firstItem="Tm5-JM-UGe" firstAttribute="trailing" secondItem="F2u-Fe-4sh" secondAttribute="trailingMargin" id="bGn-WP-a6z"/>
+                            <constraint firstItem="tfd-5A-Jkd" firstAttribute="trailing" secondItem="F2u-Fe-4sh" secondAttribute="trailingMargin" id="ch2-4I-Luz"/>
+                            <constraint firstItem="akZ-e3-Oqp" firstAttribute="leading" secondItem="F2u-Fe-4sh" secondAttribute="leadingMargin" id="ciK-y3-a9g"/>
+                            <constraint firstItem="MU5-eF-Bcj" firstAttribute="leading" secondItem="F2u-Fe-4sh" secondAttribute="leadingMargin" id="hDT-JO-zRG"/>
+                            <constraint firstItem="Tm5-JM-UGe" firstAttribute="top" secondItem="GHb-bm-2KQ" secondAttribute="bottom" constant="25" id="mDZ-jD-jcF"/>
+                            <constraint firstItem="mgi-Y5-ndN" firstAttribute="trailing" secondItem="F2u-Fe-4sh" secondAttribute="trailingMargin" id="pyb-Hk-GBS"/>
+                            <constraint firstItem="GHb-bm-2KQ" firstAttribute="leading" secondItem="F2u-Fe-4sh" secondAttribute="leadingMargin" id="rfj-Iv-q6b"/>
+                            <constraint firstItem="Hxn-mb-YD5" firstAttribute="top" secondItem="MU5-eF-Bcj" secondAttribute="bottom" constant="25" id="uLq-tC-dfU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4oE-eh-JLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="108"/>
+        </scene>
+    </scenes>
+</document>
